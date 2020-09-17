@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>YTLoader</title>
+	<link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+	<link rel="stylesheet" href="{% static 'libs/font-awesome/all.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+	
+	<div>
+
+
+		<header class="header">
+			<div class="container">
+				<div>
+					<h1>YTLoader</h1>
+				</div>
+			</div>
+		</header>
+
+		<div class="banner">
+			<div class="container">
+				<div class="search-form" id="search-form">
+					<div id="form-head">
+						<h1 id="form-h1">Download video from YouTube!</h1>
+					</div>
+					<div class="div-main">
+						<div class="div-common div1" id="div1"></div>
+						<div class="div-common div2" id="div2"></div>
+						<div class="div-common div3" id="div3"></div>
+						<div class="div-common div4" id="div4"></div>
+						<div class="div-common div5" id="div5"></div>
+					</div>
+					<form class="header__form" id="header__form" method="GET" action="{% url 'home' %}">
+						<input class="header__input" id="header__input" type="text" placeholder="Enter link..." autocomplete="off" name='search' maxlength="100">
+						<button type="submit" class="fas fa-search fa-2x header__btn"></button>
+					</form>
+		        </div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="container">
+				
+			</div>
+		</footer>
+
+
+	</div>
+
+	
+	<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

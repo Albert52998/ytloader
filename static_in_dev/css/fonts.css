@@ -1,0 +1,32 @@
+/* font-family: 'Roboto Condensed';
+======================================== */
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url('../fonts/roboto_condensed-bold/robotocondensed-bold-webfont.woff') format('woff'),
+	url('../fonts/roboto_condensed-bold/robotocondensed-bold-webfont.woff2') format('woff'),
+	url('../fonts/roboto_condensed-bold/RobotoCondensed-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* font-family: 'Montserrat';
+======================================== */
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/montserrat-medium/montserrat-medium-webfont.woff') format('woff'),
+	url('../fonts/montserrat-medium/montserrat-medium-webfont.woff2') format('woff'),
+	url('../fonts/montserrat-medium/Montserrat-Medium.ttf') format('truetype');
+	font-weight: medium;
+	font-style: normal;
+}
+
+/* font-family: 'Pacifico';
+======================================== */
+@font-face {
+	font-family: 'Pacifico';
+	src: url('../fonts/pacifico-regular/pacifico-regular-webfont.woff') format('woff'),
+	url('../fonts/pacifico-regular/pacifico-regular-webfont.woff2') format('woff'),
+	url('../fonts/pacifico-regular/Pacifico-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
