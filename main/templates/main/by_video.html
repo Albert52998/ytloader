@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>YTLoader</title>
+	<link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+	<link rel="stylesheet" href="{% static 'libs/font-awesome/all.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+	
+	<div>
+
+
+		<header class="header">
+			<div class="container">
+				<div>
+					<a href="{% url 'home' %}">YTLoader</a>
+				</div>
+			</div>
+		</header>
+
+		<div class="banner">
+			<div class="container">
+				<div class="search-form" id="search-form">
+					<!-- <div id="form-head">
+						<h1 id="form-h1">Download video from YouTube!</h1>
+					</div>
+					<div class="div-main">
+						<div class="div-common div1" id="div1"></div>
+						<div class="div-common div2" id="div2"></div>
+						<div class="div-common div3" id="div3"></div>
+						<div class="div-common div4" id="div4"></div>
+						<div class="div-common div5" id="div5"></div>
+					</div> -->
+					
+					<!-- <form class="banner__form" id="banner__form" method="GET" action="">
+						<input class="banner__input" id="banner__input" type="text" placeholder="Enter link" autocomplete="off" name='url' maxlength="100">
+						<button type="submit" class="fas fa-search fa-2x banner__btn" id="banner__btn"></button>
+					</form>
+
+					<h1 id="loading-text">loading your video...</h1> -->
+
+					<a href="{% url 'by_video' current_video.pk %}" class="v-download" id="v-download">Download</a>
+
+		        </div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="container">
+				
+			</div>
+		</footer>
+
+
+	</div>
+
+	
+	<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
