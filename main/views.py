@@ -1,61 +1,37 @@
 from django.shortcuts import render, redirect
+from django.http import FileResponse, HttpResponse
 
-from .models import Video
+# from .models import Video
 
 import youtube_dl
-import uuid
+# import uuid
+
+from pytube import YouTube
+import os
 
 
 def index(request):
-	last_video = Video.objects.last()
-	current_video = Video.objects.get(pk=last_video.pk)
-	return render(request, 'main/index.html', {'current_video': current_video})
+	return render(request, 'main/index.html')
 
 
-def video_loader(request, video_id):
-	video_url = request.GET.get('url', '')
+def video_loader(request):
+	video_url = request.POST.get('url', '')
 
-	filename = str(uuid.uuid4())
+	homedir = os.path.expanduser("~")
+	dirs = homedir + '/Downloads'
 
 	ydl_opts = {
-		'format': 'bestvideo',
-		'outtmpl': f'media/videos/{filename}.%(ext)s'
+		# 'format': 'bestvideo',
+		'outtmpl': f'{dirs}/%(title)s.%(ext)s'
 	}
 
-	if video_url:
-		with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-			ydl.download([video_url])
-			Video.objects.create(name=filename, url=video_url, file=f'videos/{filename}.mp4')
-			# last_video = Video.objects.last()
+	if request.method == 'POST':
+		youtube_dl.YoutubeDL(ydl_opts).download([video_url])
+		return HttpResponse("DONE!!!")
 	else:
-		pass
-
-	current_video = Video.objects.get(pk=video_id)
-
-	return redirect(current_video.file.url)
+		return HttpResponse("Error!")
 
 
 
 
-# def by_video(request, video_id):
-# 	current_video = Video.objects.get(pk=video_id)
-#
-# 	video_url = request.GET.get('url', '')
-#
-# 	filename = str(uuid.uuid4())
-#
-# 	ydl_opts = {
-#         # 'format': 'bestvideo',
-#         'outtmpl': f'media/videos/{filename}/{filename}.%(ext)s'
-#     }
-#
-# 	if video_url:
-# 		with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-# 			ydl.download([video_url])
-# 			Video.objects.create(name=filename, url=video_url)
-# 			# return redirect('/')
-# 	else:
-# 		pass
-#
-# 	return render(request, 'main/by_video.html', {'current_video': current_video})
 

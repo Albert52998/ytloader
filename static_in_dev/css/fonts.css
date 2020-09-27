@@ -16,7 +16,7 @@
 	src: url('../fonts/montserrat-medium/montserrat-medium-webfont.woff') format('woff'),
 	url('../fonts/montserrat-medium/montserrat-medium-webfont.woff2') format('woff'),
 	url('../fonts/montserrat-medium/Montserrat-Medium.ttf') format('truetype');
-	font-weight: medium;
+	font-weight: 500;
 	font-style: normal;
 }
 
@@ -30,3 +30,34 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+/* font-family: 'Noto Sans JP - bold';
+======================================== */
+@font-face {
+	font-family: 'Noto Sans JP';
+	src: url('../fonts/noto_sans_jp-bold-medium/notosansjp-bold-webfont.woff') format('woff'),
+	url('../fonts/noto_sans_jp-bold-medium/notosansjp-bold-webfont.woff2') format('woff'),
+	url('../fonts/noto_sans_jp-bold-medium/NotoSansJP-Bold.otf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* font-family: 'Noto Sans JP - medium';
+======================================== */
+@font-face {
+	font-family: 'Noto Sans JP';
+	src: url('../fonts/noto_sans_jp-bold-medium/notosansjp-medium-webfont.woff') format('woff'),
+	url('../fonts/noto_sans_jp-bold-medium/notosansjp-medium-webfont.woff2') format('woff'),
+	url('../fonts/noto_sans_jp-bold-medium/NotoSansJP-Medium.otf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+
+
+
+
+
+
+

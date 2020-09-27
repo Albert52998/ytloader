@@ -17,7 +17,8 @@
 		<header class="header">
 			<div class="container">
 				<div>
-					<a href="{% url 'home' %}">YTLoader</a>
+					<a class="logo" href="{% url 'home' %}">YTLoader</a>
+					<a class="help" href="#0">Help</a>
 				</div>
 			</div>
 		</header>
@@ -36,13 +37,11 @@
 						<div class="div-common div5" id="div5"></div>
 					</div> -->
 
-{#                    {% for video in videos %}#}
-					<form class="banner__form" id="banner__form" method="POST" action="{% url 'video_loader' current_video.pk %}">
+                    <form class="banner__form" id="banner__form" method="POST" action="{% url 'video_loader' %}">
                         {% csrf_token %}
-						<input class="banner__input" id="banner__input" type="text" placeholder="Enter link" autocomplete="off" name='url' maxlength="100">
-						<button type="submit" class="fas fa-search fa-2x banner__btn" id="banner__btn"></button>
-					</form>
-{#                    {% endfor %}#}
+                        <input class="banner__input" id="banner__input" type="text" placeholder="Enter link" autocomplete="off" name='url' maxlength="100">
+                        <button type="submit" class="fas fa-arrow-alt-circle-down fa-3x banner__btn" id="banner__btn"></button>
+                    </form>
 
 					<h1 id="loading-text">loading your video...</h1>
 
