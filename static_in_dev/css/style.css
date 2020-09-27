@@ -14,8 +14,8 @@ ul {
 	list-style: none;
 }
 .container {
-	min-width: 1260px;
-	max-width: 1260px;
+	min-width: 1050px;
+	max-width: 1050px;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -29,7 +29,7 @@ ul {
 	top: 0;
 	left: 0;
 	min-width: 100%;
-	height: 80px;
+	height: 63px;
 	background-color: #0c1013;
 	border: none;
 	-webkit-box-shadow: 0 0 19px 2px rgba(0, 0, 0, .91);
@@ -45,15 +45,26 @@ ul {
 .header .container div {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	/*justify-content: center;*/
 }
-.header a {
+.header .logo {
 	display: inline;
-	margin: 0;
-	font-family: 'Pacifico';
-	font-size: 46px;
-	letter-spacing: 1px;
-	margin-bottom: -3px;
+	margin: 0 0 -5px 0;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: bold;
+	font-size: 48px;
+	letter-spacing: .5px;
+}
+
+.header .help {
+	display: inline;
+	margin: 0 0 -5px 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 27px;
+	letter-spacing: .5px;
+	position: absolute;
+	right: 0;
 }
 
 .banner {
@@ -61,8 +72,9 @@ ul {
 	top: 0;
 	width: 100%;
 	min-height: 100vh;
-	background: #0d0f0f;
-	/*background: #000;*/
+	/*background: #0d0f0f;*/
+	/*background: #333333;*/
+	background: #242222;
 }
 .search-form {
 	position: fixed;
@@ -77,12 +89,12 @@ ul {
 .search-form h1 {
 	display: none;
 	position: relative;
-	top: 320px;/*
-	background: linear-gradient(to left,#ff8a00,#da1b60);
+	top: 320px;
+	/*background: linear-gradient(to left,#ff8a00,#da1b60);
 	color: #ff8a00;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;*/
-	font-family: "Roboto Condensed";
+	font-family: "Roboto Condensed", sans-serif;
 	text-transform: uppercase;
 	/*letter-spacing: 1px;*/
 	letter-spacing: 4px;
@@ -248,7 +260,8 @@ ul {
 	height: 70px;
 	-webkit-box-shadow: inset 0 0 5px 1px rgba(0,0,0,.6);
 	box-shadow: inset 0 0 5px 1px rgba(0,0,0,.6);
-	border: 1px solid rgba(6,6,6,.99);
+	/*border: 1px solid rgba(6,6,6,.99);*/
+	border: 3px solid #030303;
 	background-color: #0f1012;
 	outline: 0;
 	color: #d1d1d1;
@@ -256,9 +269,9 @@ ul {
 	font-weight: 600;
 	line-height: 70.58px;
 	padding-left: 30px;
-	padding-right: 73px;
+	padding-right: 80px;
 	letter-spacing: .5px;
-	border-radius: 50px;
+	border-radius: 3px;
 	position: relative;
 }
 .banner__btn {
@@ -278,7 +291,7 @@ ul {
 	right: 0;
 	height: 100%;
 	margin: 0;
-	margin-right: 26px;
+	margin-right: 18px;
 	top: -1px;
 	display: flex;
 	align-items: center;
@@ -306,9 +319,8 @@ ul {
 	position: relative;
 	top: 330px;
 	font-size: 26px;
-	border-radius: 10px;
 	padding: 26px 50px;
-	font-family: "Roboto Condensed";
+	font-family: "Roboto Condensed", sans-serif;
 	letter-spacing: .5px;
 	--text-color: hsla(210, 50%, 85%, 1);
 	--shadow-color: hsla(210, 40%, 52%, .4);
@@ -321,8 +333,7 @@ ul {
 	margin: 0;
 	overflow: visible;
 	text-transform: none;
-	/*display: inline-block;*/
-	display: none;
+	display: inline-block;
 	border: none;
 	background: linear-gradient(to bottom,#52525b 0,#3d3d46 100%);
 	/*font-size: 24px;
