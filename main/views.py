@@ -21,7 +21,7 @@ def video_loader(request):
 	dirs = homedir + '/Downloads'
 
 	ydl_opts = {
-		# 'format': 'bestvideo',
+		'format': 'bestvideo',
 		'outtmpl': f'{dirs}/%(title)s.%(ext)s'
 	}
 
