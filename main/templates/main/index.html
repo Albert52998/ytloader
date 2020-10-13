@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="{% static 'css/fonts.css' %}">
 	<link rel="stylesheet" href="{% static 'libs/font-awesome/all.min.css' %}">
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adaptive.css' %}">
 {#    <link rel="stylesheet" href="{% static 'css/3d_text.css' %}">#}
 {#    <link rel="stylesheet" href="{% static 'css/neon_text.css' %}">#}
 </head>
@@ -73,8 +74,10 @@
 
                     <form class="banner__form" id="banner__form" method="POST" action="{% url 'video_loader' %}">
                         {% csrf_token %}
-                        <input class="banner__input" id="banner__input" type="text" placeholder="Enter link" autocomplete="off" name='url' maxlength="100">
-                        <button type="submit" class="fas fa-arrow-alt-circle-down fa-3x banner__btn" id="banner__btn"></button>
+                        <div>
+                            <input class="banner__input" id="banner__input" type="text" placeholder="Enter link" autocomplete="off" name='url' maxlength="100">
+                            <button type="submit" class="fas fa-arrow-alt-circle-down fa-3x banner__btn" id="banner__btn"></button>
+                        </div>
                     </form>
 
 					<h1 id="loading-text">loading your video...</h1>
