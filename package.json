@@ -1,0 +1,22 @@
+{
+  "name": "ytloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Albert52998/ytloader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Albert52998/ytloader/issues"
+  },
+  "homepage": "https://github.com/Albert52998/ytloader#readme",
+  "dependencies": {
+    "create-react-app": "^4.0.0"
+  }
+}
