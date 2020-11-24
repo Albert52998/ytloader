@@ -7,6 +7,7 @@ export default function Help() {
   return (
       <>
         <Header />
+
         <div className="help-block">
           <div className="container">
             <p className="help">

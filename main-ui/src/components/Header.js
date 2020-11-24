@@ -10,7 +10,6 @@ export default class Header extends PureComponent {
         <div>
           <header className="header">
             <div className="container">
-              <div>
 
                 <NavLink
                     className="logo"
@@ -24,7 +23,6 @@ export default class Header extends PureComponent {
                     exact
                 >Help</NavLink>
 
-              </div>
             </div>
           </header>
         </div>
